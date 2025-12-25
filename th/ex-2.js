@@ -16,7 +16,7 @@
 function findIfProductsAvailable (products ,targetProduct, targetQuantity){
     for (let i = 0; i < products.length; i++) {
         if ((targetProduct === products[i].name) && (products[i].quantity >= targetQuantity)) {
-            return `${products[i].quantity} ${targetProduct}(s) are available at Zone ${products[i].zone}`
+            return `${targetQuantity} ${targetProduct}(s) are available at Zone ${products[i].zone}`
         } else if ((targetProduct === products[i].name) && (products[i].quantity < targetQuantity)) {
             return `Sorry, we've got only ${products[i].quantity} ${targetProduct}(s) available at Zone ${products[i].zone}`
         }
